@@ -8,4 +8,11 @@ module.exports = defineConfig({
     },
     chromeWebSecurity: false
   },
+  e2e: {
+
+    baseUrl: "http://lojaebac.ebaconline.art.br/"
+ 
+   },
 });
+
+

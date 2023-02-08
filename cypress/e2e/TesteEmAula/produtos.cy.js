@@ -15,7 +15,7 @@ describe('Funcionalidade pagina de produtos', () => {
         .contains('Aero Daily Fitness Tee')
         .click()
     });
-    it.only('Deve adicionar um produto ao carrinho', () => {
+    it('Deve adicionar um produto ao carrinho', () => {
         var quantidade =  3 
 
         cy.get('[class="product-block grid"]').contains('Abominable Hoodie').click()
@@ -27,6 +27,13 @@ describe('Funcionalidade pagina de produtos', () => {
         cy.get('.woocommerce-message').should('contain', quantidade)
     });
 
+    it('Deve adicionar um produto ao carrinho - suporte de comando js', () => {
+        cy.addProdutos('Ajax Full-Zip Sweatshirt','L', 'Red', 5)
+    });
+
+    it('Deve adicionar um produto ao carrinho - suporte de comando js', () => {
+        cy.addProdutos('Abominable Hoodie','L', 'Red', 7)
+    });
 
 
 });
